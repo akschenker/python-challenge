@@ -9,10 +9,6 @@ The greatest increase in profits (date and amount) over the entire period
 The greatest decrease in losses (date and amount) over the entire period
 """
 
-def textprint(string, textfile):
-	print(string)
-	print(string, file=textfile)
-
 csvpath = os.path.join('budget_data.csv')
 
 with open(csvpath, newline='') as csvfile:
@@ -47,6 +43,11 @@ for i in range(len(revenueList)):
 
 averageChange = sum(changeList) / len(changeList)
 
+
+
+def textprint(string, textfile):
+	print(string)
+	print(string, file=textfile)
 
 outputPath = os.path.join('PyBank.txt')
 
